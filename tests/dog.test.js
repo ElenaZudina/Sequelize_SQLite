@@ -1,3 +1,4 @@
+/** @jest-environment node */
 // tests/dog.test.js
 import { Sequelize, DataTypes } from 'sequelize';
 

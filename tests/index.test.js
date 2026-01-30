@@ -1,3 +1,4 @@
+/** @jest-environment node */
 // tests/index.test.js
 import { Sequelize } from 'sequelize'; // Keep this import for DataTypes or if needed for type
 import path from 'path';

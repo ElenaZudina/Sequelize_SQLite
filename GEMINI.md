@@ -14,8 +14,8 @@ This is a simple web application named "DogBreeds" built with Node.js, Express, 
 *   `server.js`: The main entry point for the backend. It sets up the Express server, handles static file serving from the `public` directory, and defines the API endpoint `/api/breeds`.
 *   `models/`: Contains Sequelize model definitions (`dog.js`) and database connection/initialization logic (`index.js`).
 *   `data/`: Stores the `dogbreeds.sqlite` database file.
-*   `public/`: Contains all frontend assets including `index.html`, `app.js`, `styles.css`, and images.
-*   `scripts/`: Contains utility scripts, specifically `seed.js` for populating the database.
+*   `public/`: Contains all frontend assets including `index.html`, `app.js`, `styles.css`, and images. **(Note: `public/app.js` is not unit-tested because its functions are not exported, preventing direct import and testing without modifying the source file.)**
+*   `scripts/`: Contains utility scripts, specifically `seed.js` for populating the database. **(Note: `scripts/seed.js` is not unit-tested due to its current implementation (IIFE) which prevents direct import and testing of its `seed` function without modifying the source file.)**
 *   `tests/`: Contains unit and integration tests for the application.
 
 ## Functionality:
@@ -68,7 +68,7 @@ The project uses `jest` for testing. To run tests:
 ```bash
 npm test
 ```
-*A unit test for the `Dog` model has been added in `tests/dog.test.js`.*
+*Unit tests for the `Dog` model (`tests/dog.test.js`) and database connection logic (`tests/index.test.js`) are available.*
 
 # Development Conventions
 
