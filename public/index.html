@@ -1,0 +1,38 @@
+<!--
+   фронтенд для приложения "Kinoman".
+  - Отображает список фильмов, полученных из /api/movies
+-->
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DogBreeds</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="container">
+        <h1>DogBreeds</h1>
+        <p class="subtitle">Подборка пород собак из базы SQLite</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- Контейнер, куда будет динамически подставлен список фильмов -->
+      <section id="dogs" class="dogs-grid" aria-live="polite"></section>
+    </main>
+
+    <footer class="app-footer">
+      <div class="container">
+        <p>
+          Картинка для всех фильмов: <code>/images/test.jpg</code>. Поместите файл
+          <code>test.jpg</code> в <code>public/images</code>.
+        </p>
+      </div>
+    </footer>
+
+    <script src="/app.js"></script>
+  </body>
+  </html>
+

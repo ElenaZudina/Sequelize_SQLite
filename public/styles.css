@@ -1,0 +1,71 @@
+/*
+  public/styles.css
+  Минималистичные стили для сетки карточек фильмов.
+  Комментарии поясняют назначение ключевых правил.
+*/
+
+:root {
+  --bg: #0e0f13;
+  --text: #e7e9ee;
+  --muted: #a0a7b4;
+  --card: #151821;
+  --accent: #6ea8fe;
+  --shadow: rgba(0, 0, 0, 0.4);
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+.app-header {
+  background: linear-gradient(180deg, #121523 0%, #0e0f13 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 10px 20px var(--shadow);
+}
+
+.app-header .container { padding: 24px 0; }
+
+h1 { margin: 0; font-size: 28px; }
+.subtitle { margin: 8px 0 0; color: var(--muted); }
+
+.dogs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+  padding: 24px 0 36px;
+}
+
+.dog-card {
+  background: var(--card);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px var(--shadow);
+  display: flex;
+  flex-direction: column;
+}
+
+.dog-cover {
+  width: 100%;
+  aspect-ratio: 16/9; /* сохраняем пропорции превью */
+  object-fit: cover;  /* заполняем, не искажая */
+  background: #0b0c10; /* фон на случай, если изображение не загрузится */
+}
+
+.dog-body { padding: 12px 14px 16px; }
+.dog-title { margin: 0 0 6px; font-size: 18px; line-height: 1.3; }
+.dog-meta { color: var(--muted); font-size: 14px; margin-bottom: 8px; }
+.dog-desc { color: #cfd4df; font-size: 14px; line-height: 1.45; margin: 0; }
+
+.app-footer { border-top: 1px solid rgba(255,255,255,0.06); }
+.app-footer .container { padding: 16px 0 24px; color: var(--muted); }
+
