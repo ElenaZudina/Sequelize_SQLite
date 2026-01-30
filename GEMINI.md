@@ -11,11 +11,12 @@ This is a simple web application named "DogBreeds" built with Node.js, Express, 
 *   **Testing:** Jest (though no tests were reviewed)
 
 ## Architecture:
-*   **`server.js`:** The main entry point for the backend. It sets up the Express server, handles static file serving from the `public` directory, and defines the API endpoint `/api/breeds`.
-*   **`models/`:** Contains Sequelize model definitions (`dog.js`) and database connection/initialization logic (`index.js`).
-*   **`data/`:** Stores the `dogbreeds.sqlite` database file.
-*   **`public/`:** Contains all frontend assets including `index.html`, `app.js`, `styles.css`, and images.
-*   **`scripts/`:** Contains utility scripts, specifically `seed.js` for populating the database.
+*   `server.js`: The main entry point for the backend. It sets up the Express server, handles static file serving from the `public` directory, and defines the API endpoint `/api/breeds`.
+*   `models/`: Contains Sequelize model definitions (`dog.js`) and database connection/initialization logic (`index.js`).
+*   `data/`: Stores the `dogbreeds.sqlite` database file.
+*   `public/`: Contains all frontend assets including `index.html`, `app.js`, `styles.css`, and images.
+*   `scripts/`: Contains utility scripts, specifically `seed.js` for populating the database.
+*   `tests/`: Contains unit and integration tests for the application.
 
 ## Functionality:
 *   **Frontend:** A single-page application that fetches dog breed data from the backend and displays it in a responsive grid. Each dog breed is presented as a card with an image, title, origin, year, and description.
@@ -67,7 +68,7 @@ The project uses `jest` for testing. To run tests:
 ```bash
 npm test
 ```
-*(Note: No test files were reviewed, so this command assumes `jest` is configured to find them.)*
+*A unit test for the `Dog` model has been added in `tests/dog.test.js`.*
 
 # Development Conventions
 

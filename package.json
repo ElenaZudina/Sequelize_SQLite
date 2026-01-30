@@ -18,6 +18,18 @@
         "sqlite3": "^5.1.7"
     },
     "devDependencies": {
+        "@babel/core": "^7.28.6",
+        "@babel/preset-env": "^7.28.6",
+        "babel-jest": "^30.2.0",
         "nodemon": "^3.1.4"
+    },
+    "jest": {
+        "transform": {
+            "^.+\\.js$": "babel-jest"
+        },
+        "testMatch": [
+            "**/tests/**/*.test.js"
+        ],
+        "testEnvironment": "node"
     }
 }
